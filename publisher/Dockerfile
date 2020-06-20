@@ -1,4 +1,4 @@
-FROM ruby:2.5
+FROM ruby:2.7
 
 ENV BUNDLE_PATH .bundle
 ENV LANG en_US.UTF-8
