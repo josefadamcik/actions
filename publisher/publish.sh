@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Save private ssh key from env var
-echo $JEKYLL_DEPLOY_KEY | base64 -d > /key
+echo $JEKYLL_DEPLOY_KEY > /ssh.key
 
 # Make sure the key has correct permissions
 chmod 0600 /key
