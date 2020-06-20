@@ -4,11 +4,11 @@
 echo $JEKYLL_DEPLOY_KEY > /ssh.key
 
 # Make sure the key has correct permissions
-chmod 0600 /key
+chmod 0600 /ssh.key
 
 # Sync the files
 rsync \
-  -e "ssh -i /key -o StrictHostKeyChecking=no -p $DEPLOY_PORT" \
+  -e "ssh -i /ssh.key -o StrictHostKeyChecking=no -p $DEPLOY_PORT" \
   -rtzh \
   _site/ \
   --progress \
