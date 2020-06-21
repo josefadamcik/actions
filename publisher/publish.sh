@@ -7,7 +7,7 @@ echo "$JEKYLL_DEPLOY_KEY" > /ssh.key
 chmod 0600 /ssh.key
 
 # Sync the files
-rsync -n \
+rsync \
   -e "ssh -i /ssh.key -o StrictHostKeyChecking=no -p $DEPLOY_PORT" \
   -rtzh \
   _site/ \
